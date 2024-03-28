@@ -1,33 +1,29 @@
 #include "monty.h"
-arg_t args = NULL;
+arg_t *args = NULL;
 
 /**
- * main - Enter point to the program
- * @argc: num of args
- * @argv: array of arguments
- * Return: ZERO ON SUCCESS.
+ * main - Start point of the prog
+ * @agc: args num
+ * @agv: array of args
+ * Return: SUCCESS ZERO
  */
-
-int main(int argc, char **argv)
+int main(int agc, char **agv)
 {
-	size_t f = 0;
+	size_t z = 0;
 
-	valid_args(argc);/*check for vaild num of args*/
-	intit_args();/*init args*/
-	get_stream(argv[1]);/*open the file in read mode*/
+	v_args(agc);
+	i_args();
+	g_s(agv[1]);
 
-
-	while (getline(&args->line, &f, args->stream) != -1)
+	while (getline(&args->l, &z, args->s) != -1)
 	{
-		args->line += 1;/*monetor line num*/
-		tokenization();/*break down line into pieces*/
-		get_instruc();/*opcode getting*/
-		run();/*run the instruc*/
+		args->l_n += 1;
+		tokenizer();
+		g_ins();
+		run();
 		free_tok();
 	}
-
-	end_stream();/*close the file*/
-	free_args();/*free to avoid memo leak*/
-
+	c_file();
+	ags_free();
 	return (0);
 }
