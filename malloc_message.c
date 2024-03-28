@@ -1,4 +1,3 @@
-
 #include "monty.h"
 
 /**
@@ -10,4 +9,3 @@ void malloc_m(void)
 	ags_free();
 	exit(EXIT_FAILURE);
 }
-

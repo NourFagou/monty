@@ -42,3 +42,4 @@ void g_ins(void)
 	}
 	invalid_message();
 }
+

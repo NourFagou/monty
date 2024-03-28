@@ -14,3 +14,4 @@ int q_com(void)
 		return (1);
 	return (0);
 }
+

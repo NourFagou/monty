@@ -1,4 +1,3 @@
-
 #include "monty.h"
 /**
  * swap - changes between two nodes
@@ -29,4 +28,3 @@ void swap(stack_t **stack, unsigned int l_n)
 	node2->prev = NULL;
 	args->head = node2;
 }
-

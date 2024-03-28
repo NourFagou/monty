@@ -11,3 +11,4 @@ void del(void)
 	args->head = node->next;
 	free(node);
 }
+
