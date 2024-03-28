@@ -1,5 +1,4 @@
 #include "monty.h"
-arg_t *args = NULL;
 
 /**
  * main - Start point of the prog
@@ -10,6 +9,7 @@ arg_t *args = NULL;
 int main(int agc, char **agv)
 {
 	size_t z = 0;
+	arg_t *args = NULL; /* Declaration moved inside main */
 
 	v_args(agc);
 	i_args();
